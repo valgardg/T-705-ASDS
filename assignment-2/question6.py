@@ -1,5 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+import seaborn as sns
 
 def find_lowest_median(df):
     numeric_cols = df.select_dtypes(include=['number'])
@@ -68,6 +69,23 @@ def plot_histogram_limit(df):
     else:
         print("Column 'Limit' not found in the DataFrame")
 
+def plot_boxplot_balance(df):
+    # Check if the required columns exist in the DataFrame
+    if 'Balance' in df.columns and 'Student' in df.columns:
+        plt.figure(figsize=(10, 6))
+        
+        # Create the boxplot
+        sns.boxplot(x='Student', y='Balance', data=df, palette={'Yes': 'skyblue', 'No': 'salmon'})
+        
+        # Set title and labels
+        plt.title('Boxplot of Balance by Student Status')
+        plt.xlabel('Student Status')
+        plt.ylabel('Balance')
+        plt.grid(axis='y', alpha=0.75)
+        plt.show()
+    else:
+        print("Required columns 'Balance' or 'Student' not found in the DataFrame")
+
 def read_csv():
     file_path = 'Credit.csv'
     df = pd.read_csv(file_path)
@@ -102,5 +120,9 @@ def main():
 
     # g. Histogram of Limit
     plot_histogram_limit(df)
+    # WHAT CAN WE SAY ABOUT THIS VARIABLE?
+
+    # h. Boxplot
+    plot_boxplot_balance(df)
 if __name__ == "__main__":
     main()
