@@ -61,8 +61,8 @@ def plot_histogram_limit(df):
     if 'Limit' in df.columns:
         plt.figure(figsize=(10, 6))
         plt.hist(df['Limit'], bins=30, color='skyblue', edgecolor='black')
-        plt.title('Histogram of Credit Limits')
-        plt.xlabel('Credit Limit')
+        plt.title('Histogram of the variable Limit')
+        plt.xlabel('Limit value')
         plt.ylabel('Frequency')
         plt.grid(axis='y', alpha=0.75)
         plt.show()
