@@ -11,8 +11,3 @@ print(f"P-value: {p_value:.4f}")
 print(f"Degrees of Freedom: {dof}")
 print("Expected Frequencies:")
 print(expected)
-
-if p_value < alpha:
-    print("Reject the null hypothesis: There is a significant association between teaching method and pass rate.")
-else:
-    print("Fail to reject the null hypothesis: There is no significant association between teaching method and pass rate.")

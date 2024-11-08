@@ -26,8 +26,3 @@ print("Sample Standard Deviation:", sample_std)
 print("t-Statistic:", t_stat)
 print("Critical t-Value:", t_critical)
 print("p-Value:", p_value)
-
-if t_stat > t_critical:
-    print("Reject the null hypothesis: There is enough evidence to support the claim that the plants are growing taller.")
-else:
-    print("Fail to reject the null hypothesis: There is not enough evidence to support the claim that the plants are growing taller.")

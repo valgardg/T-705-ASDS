@@ -45,8 +45,3 @@ print("Observed Counts (after combining):", observed_counts_combined)
 print("Expected Counts (after combining):", expected_counts_combined)
 print("Chi-Square Statistic:", chi_square_stat)
 print("Critical Value at 0.01 significance level:", critical_value)
-
-if chi_square_stat < critical_value:
-    print("Conclusion: Fail to reject the null hypothesis. Data follows a Poisson distribution.")
-else:
-    print("Conclusion: Reject the null hypothesis. Data does not follow a Poisson distribution.")

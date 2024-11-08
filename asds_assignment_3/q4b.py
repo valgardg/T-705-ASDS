@@ -6,7 +6,6 @@ heights = [72, 75, 78, 80, 82, 85, 68, 75, 79, 77, 80, 76, 81, 74, 72, 88, 91, 8
            86, 80, 78, 77, 74, 84, 83, 81, 87, 85]
 
 n_bootstrap = 10000
-
 bootstrap_medians = []
 
 for _ in range(n_bootstrap):
